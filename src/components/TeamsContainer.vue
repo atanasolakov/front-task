@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <HeroAvatar :level="5" :name="RichyRich" />
+    <HeroAvatar :level="5" name="RichyRich" />
     <SearchInput />
     <MyTeams />
   </div>

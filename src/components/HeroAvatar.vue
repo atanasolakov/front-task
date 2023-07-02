@@ -3,13 +3,13 @@
    <div class="nav">
      <img src="../assets/arrow-left.svg" class="img-arrow"  width="16px" height="15px" />
      <img src="../assets/logo.svg" class="img-logo" width="32.72px" height="18.04px" />
-     <span class="name">RichyRich</span>
+     <span class="name">{{ name }}</span>
      <img src="../assets/notification.svg" width="20" height="20" class="notification">
    </div>
    <div class="avatar-container">
      <div class="large-devices">
      <img src="../assets/avatar.png" width="60" height="60">
-       <span class="name-large-devices">RichyRich</span>
+       <span class="name-large-devices">{{ name }}</span>
      </div>
      <div class="level-text">Level {{level}}</div>
      <div class="tabs">
@@ -25,6 +25,7 @@ export default {
   name: 'HeroAvatar',
   props: {
     level: Number,
+    name: String,
   },
   data() {
     return {
