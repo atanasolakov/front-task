@@ -26,7 +26,8 @@
             </div>
             <div class="abb">
               <div class="name">{{team.name}}</div>
-              <img class="stadium-image" src="../assets/stadium.svg">  <div class="stadium">{{team.stadium}}</div>
+              <img class="stadium-image" src="../assets/stadium.svg">
+              <div class="stadium">{{team.stadium}}</div>
             </div>
           </div>
           <button @click="toggleFollow(team.id)" :class="{ 'followed': isFollowed(team.id) }">
@@ -130,6 +131,7 @@ export default {
   height: 3.125rem;
   display: flex;
   padding-left: 0.625rem;
+  -moz-text-size-adjust: auto;
 }
 
 .team-symbol {
@@ -152,7 +154,7 @@ export default {
   font-size: 0.6875rem;
   color: $static-color;
   gap: 0.625rem;
-  @media (max-width: 480px) {
+  @media (max-width: $breakpoint-small) {
   font-size: 0.5rem ;
 }
 }
@@ -166,14 +168,14 @@ export default {
   font-size: 0.6875rem;
   padding-top: 0.3125rem;
   padding-left: 0.3125rem;
-  @media (max-width: 480px) {
+  @media (max-width: $breakpoint-small) {
     font-size: 0.5rem ;
   }
 }
 
 .name {
   font-size: 0.875rem;
-  @media (max-width: 480px) {
+  @media (max-width: $breakpoint-small) {
     font-size: 0.5rem ;
   }
 }
@@ -189,13 +191,17 @@ export default {
 }
 
 .no-results {
+  overflow: hidden;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .stadium-image {
-  @media (max-width: 480px) {
+  @media (max-width: $breakpoint-small) {
     font-size: 0.5rem ;
   }
 }
-
 </style>

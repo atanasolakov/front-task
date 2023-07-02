@@ -9,6 +9,9 @@ $static-color: #6F8CAA;
 $border-color-secondary: #1A315066;
 $overflow-color: #E1E7ED;
 
+$breakpoint-small: 480px;
+$breakpoint-mobile: 768px;
+
 li {
   text-transform: uppercase;
   color: $static-color;
@@ -34,9 +37,9 @@ h1 {
 
 .custom-text-area {
   width: 90%;
-  height: 5.625rem;  // Equivalent to 90px
+  height: 5.625rem;
   background-color: $input-background;
-  border-radius: 1.25rem;  // Equivalent to 20px
+  border-radius: 1.25rem;
   border: 1px solid $input-background;
   resize: none;
 
@@ -77,7 +80,7 @@ p {
 }
 
 div::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
   height: 8px;
   background-color: #FFFFFF;
 }
@@ -97,6 +100,7 @@ button {
   margin-right: 0.625rem;
   border: 1px solid $secondary-color;
   font-weight: 600;
+  align-self: center;
   @media (max-width: 480px) {
     width: 4.85rem;
     height: 1.75rem;

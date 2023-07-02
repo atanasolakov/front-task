@@ -30,11 +30,10 @@ export default {
 .my-teams-container {
   border-top: 10px solid $border-color;
   background-color: $background-color;
-  padding-bottom: 10px;
   overflow: scroll;
   height: 180px;
   @media (max-width: 960px) {
-    height: 100px;
+    height: 140px;
   }
 }
 
